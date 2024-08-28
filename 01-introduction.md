@@ -1,32 +1,32 @@
-## Introduction
+# ***Introduction***
 
-### What is Hedera
+# What is Hedera
 
-#### EVM Compatible
+## EVM Compatible
 
 Hedera is a layer 1 EVM-compatible blockchain network. It supports smart contracts just like Ethereum does, and also offers several additional native services. All the EVM developer tools, frameworks, and libraries work out of the box, and only minimal config changes are needed.
 
 Read more about [Hedera for EVM Developers](https://docs.hedera.com/hedera/core-concepts/smart-contracts/hederas-evm-equivalence-goals-and-exceptions).
 
-#### Hashgraph Consensus
+## Hashgraph Consensus
 
 The secret sauce behind the Hedera network is its consensus algorithm, which is [DAG-based](https://en.wikipedia.org/wiki/Directed_acyclic_graph). It also means that instead of probabilistic transaction finality, Hedera has deterministic transaction finality.
 
-#### Public permissioned network
+## Public permissioned network
 
 Hedera is a public permissioned network, where members of the [Hedera governing council](https://hedera.com/council) run the consensus nodes that operate the public network. Members of the governing council have fixed terms and elect the next members.
 
-### Why build on Hedera
+# Why build on Hedera
 
-#### Technology choice
+## Technology choice
 
 The Hedera network offers SDKs in multiple languages. If you are already familiar with languages such as Javascript/Typescript, Java, or Go, you are in luck. You can write code that interacts with the network using our SDKs without the need to learn any new languages.
 
 Read more about [Hedera SDKs](https://docs.hedera.com/hedera/sdks-and-apis/sdks#hedera-services-code-sdks).
 
-For example, you can create fungible tokens and non-fungible tokens without smart contracts, using the SDK methods for Hedera Token Service (HTS).[[d]](#cmnt4)[[e]](#cmnt5) You can also create message queues with pub-sub features out of the box via[[f]](#cmnt6)[[g]](#cmnt7) Hedera Consensus Service (HCS). And of course, you can create smart contracts for everything else using Solidity via the Hedera Smart contract Service (HSCS).
+For example, you can create fungible tokens and non-fungible tokens without smart contracts, using the SDK methods for Hedera Token Service (HTS). You can also create message queues with pub-sub features out of the box via Hedera Consensus Service (HCS). And of course, you can create smart contracts for everything else using Solidity via the Hedera Smart contract Service (HSCS).
 
-#### Other reasons
+## Other reasons
 
 With Hedera, you get all of the benefits of web3 technology including decentralisation and immutability, just like you would with any other blockchain network.
 
@@ -44,9 +44,9 @@ Over and above that, you would also get Hedera-specific benefits:
 
 - See also: The Hedera Services section below
 
-### Connecting to Hedera
+# Connecting to Hedera
 
-#### Use familiar EVM dev tools and workflows
+## Use familiar EVM dev tools and workflows
 
 Hedera’s keys and signatures are a superset of what is supported by EVM. It supports both ECDSA secp256k1 keys (same as EVM) and EdDSA Ed25519 keys (not used in EVM).
 
@@ -75,18 +75,14 @@ EVM developer workflows are also supported
 
 The [Hedera Hackathon Cheat Sheet](https://github.com/hedera-dev/hedera-cheatsheets/blob/master/hedera-hackathon-starter-cheat-sheet-v1.pdf) contains detailed links for all of the above.        
 
-#### Try it out
+## Try it out
 
 Run the following command in your terminal, to issue a JSON-RPC request.
 
 ```shell
-
 curl -s https://testnet.hashio.io/api \
-
   -X POST \
-
   -H "Content-Type: application/json" \
-
   --data '{"method":"eth_getBlockByNumber","params":["latest",false],"id":1,"jsonrpc":"2.0"}'
 
 ```
@@ -105,9 +101,9 @@ curl -s "https://testnet.mirrornode.hedera.com/api/v1/blocks?limit=1&order=desc"
 
 ```
 
-Repeat the same command 2 seconds later, and observe that the block number has increased.
+Here too, repeat the same command 2 seconds later, and observe that the block number has increased.
 
-#### Fund an account
+## Fund an account
 
 Open MetaMask, and connect to Hedera Testnet. The easiest way to do so is:
 
@@ -134,20 +130,20 @@ Your MetaMask config for Hedera Testnet should look like this.
 
 Note that the RPC URL that you use should be swapped out for localhost or any other RPC provider as appropriate.
 
-![](images/image8.png) 
+![](images/metamask-network-config-hedera-testnet.png) 
 
 FYI this is what the Hedera Mainnet config should look like. However, you will not need this for the tutorial.
 
-![](images/image12.png)
+![](images/metamask-network-config-hedera-mainnet.png)
 
 
 Copy the EVM address of one of your MetaMask accounts. This should start with `0x`. In MetaMask, you can use the copy icon next to the address.
 
-![](images/image13.png)
+![](images/metamask-copy-account-evm-address.png)
 
 Then visit [faucet.hedera.com](https://faucet.hedera.com/). Paste your EVM address in the form, and submit. After about 2 seconds, you will have Testnet HBAR in your EVM account on Hedera. You can now use this account as you normally would in MetaMask. More importantly, for this guide, you can use this account to fund transactions that you’ll use to build on + interact with the Hedera network.
 
-#### Running on localhost
+## Running on localhost
 
 While you cannot run your own Hedera node connected to a public network on your computer (it is a public permissioned network), you can run your own RPC relay. Follow the instructions at [Configuring Hedera JSON-RPC Relay endpoints](https://docs.hedera.com/hedera/tutorials/more-tutorials/json-rpc-connections/hedera-json-rpc-relay).
 
