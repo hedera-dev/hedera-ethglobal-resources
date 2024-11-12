@@ -1,6 +1,6 @@
-# EthGlobal Hackathon Participant Resources for Hedera
+# Hedera Hackathon Participant Resources
 
-Looking to build on Hedera at an EthGlobal hackathon?
+Looking to build on Hedera at a hackathon?
 Here are some resources curated just for you!
 
 ## Contents
@@ -12,7 +12,8 @@ Here are some resources curated just for you!
 
 ## Author
 
-[Brendan Graetz](https://blog.bguiz.com)
+- [Brendan Graetz](https://blog.bguiz.com)
+- [Abi Castro](https://twitter.com/ridley_abi)
 
 ## Licence
 
